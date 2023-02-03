@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    function ReleasedAlbum(name,released) {
+          this.name = name;
+          this.released = released;
+          return this;
+        };
+        const album1 = new ReleasedAlbum('dfd', 45);
+        const album2 = new ReleasedAlbum('Run Wild. Live Free. Love Strong.', 2014)
+console.log(album1.name);
+return album2;
+	const favouriteBand = {
+        name : 'For King and Country',
+        nationality : 'Australia',
+        genre : 'Christian Pop',
+        members : 2,
+        formed: 2007,
+        split: false,
+        releasedItem :[ album1,album2]
+                        }
+
+var presentYear = new Date().getFullYear();
+
+var yearsactive =   presentYear - favouriteBand.formed;
+myFavouriteBandbio = `${favouriteBand.name}, ${favouriteBand.nationality}, ${yearsactive}, ${favouriteBand.genre}, ${favouriteBand.releasedItem[0]}`
+bandInfo = myFavouriteBandbio;
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
